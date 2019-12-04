@@ -8,12 +8,34 @@ view.showComponent = function (name) {
         case 'default': {
 
             let app = document.getElementById('app')
-            app.innerHTML = component.default
+            app.innerHTML = component.header + component.default + component.footer
 
             defaultFunction()
 
             let logIn = document.getElementById('sign-in')
 
+            let shopping1 = document.getElementById("navbar-column-1")
+
+            shopping1.onclick = shoppingHandler
+
+            let shopping2 = document.getElementById("navbar-column-2")
+
+            shopping2.onclick = shoppingHandler
+
+            let shopping3 = document.getElementById("navbar-column-3")
+
+            shopping3.onclick = shoppingHandler
+
+            let shopping4 = document.getElementById("navbar-column-4")
+
+            shopping4.onclick = shoppingHandler
+
+
+            function shoppingHandler() {
+
+                view.showComponent('shopPage1')
+
+            }
             logIn.onclick = signIn
 
             function signIn() {
@@ -83,7 +105,7 @@ view.showComponent = function (name) {
         case 'logIn': {
             let app = document.getElementById('app')
 
-            app.innerHTML = component.logIn
+            app.innerHTML = component.header + component.logIn + component.footer
 
             defaultFunction()
 
@@ -96,6 +118,29 @@ view.showComponent = function (name) {
                 view.showComponent('register')
 
             }
+            let shopping1 = document.getElementById("navbar-column-1")
+
+            shopping1.onclick = shoppingHandler
+
+            let shopping2 = document.getElementById("navbar-column-2")
+
+            shopping2.onclick = shoppingHandler
+
+            let shopping3 = document.getElementById("navbar-column-3")
+
+            shopping3.onclick = shoppingHandler
+
+            let shopping4 = document.getElementById("navbar-column-4")
+
+            shopping4.onclick = shoppingHandler
+
+
+            function shoppingHandler() {
+
+                view.showComponent('shopPage1')
+
+            }
+
             let logIn = document.getElementById('sign-in')
 
             logIn.onclick = signIn
@@ -156,7 +201,7 @@ view.showComponent = function (name) {
 
             let app = document.getElementById('app')
 
-            app.innerHTML = component.user;
+            app.innerHTML = component.header + component.user + component.footer;
 
             defaultFunction()
 
@@ -172,6 +217,29 @@ view.showComponent = function (name) {
             function sigOutHandler() {
                 localStorage.removeItem('dataUser')
                 view.showComponent('logIn')
+            }
+
+            let shopping1 = document.getElementById("navbar-column-1")
+
+            shopping1.onclick = shoppingHandler
+
+            let shopping2 = document.getElementById("navbar-column-2")
+
+            shopping2.onclick = shoppingHandler
+
+            let shopping3 = document.getElementById("navbar-column-3")
+
+            shopping3.onclick = shoppingHandler
+
+            let shopping4 = document.getElementById("navbar-column-4")
+
+            shopping4.onclick = shoppingHandler
+
+
+            function shoppingHandler() {
+
+                view.showComponent('shopPage1')
+
             }
 
             let shopBtn = document.getElementById('shop')
@@ -196,7 +264,7 @@ view.showComponent = function (name) {
 
             let app = document.getElementById('app')
 
-            app.innerHTML = component.register
+            app.innerHTML = component.header + component.register + component.footer
 
             defaultFunction()
 
@@ -244,7 +312,27 @@ view.showComponent = function (name) {
                 if (check(validateResult)) {
 
                     controller.register(registerInfor)
+                }
+                let shopping1 = document.getElementById("navbar-column-1")
 
+                shopping1.onclick = shoppingHandler
+
+                let shopping2 = document.getElementById("navbar-column-2")
+
+                shopping2.onclick = shoppingHandler
+
+                let shopping3 = document.getElementById("navbar-column-3")
+
+                shopping3.onclick = shoppingHandler
+
+                let shopping4 = document.getElementById("navbar-column-4")
+
+                shopping4.onclick = shoppingHandler
+
+
+                function shoppingHandler() {
+
+                    view.showComponent('shopPage1')
 
                 }
             }
@@ -273,11 +361,9 @@ view.showComponent = function (name) {
 
         case 'shopPage1': {
 
-
-
             let app = document.getElementById('app')
 
-            app.innerHTML = component.shopPage1;
+            app.innerHTML = component.header + component.shopPage1 + component.footer;
 
             if (model.productInfo == null) {
                 controller.loadShowPage()
@@ -293,6 +379,29 @@ view.showComponent = function (name) {
                 controller.changeOrder(sortRole.value)
                 view.showComponent("shopPage1")
                 console.log('1')
+            }
+
+            let shopping1 = document.getElementById("navbar-column-1")
+
+            shopping1.onclick = shoppingHandler
+
+            let shopping2 = document.getElementById("navbar-column-2")
+
+            shopping2.onclick = shoppingHandler
+
+            let shopping3 = document.getElementById("navbar-column-3")
+
+            shopping3.onclick = shoppingHandler
+
+            let shopping4 = document.getElementById("navbar-column-4")
+
+            shopping4.onclick = shoppingHandler
+
+
+            function shoppingHandler() {
+
+                view.showComponent('shopPage1')
+                
             }
 
 
@@ -330,7 +439,7 @@ view.showComponent = function (name) {
         case 'detail': {
             let app = document.getElementById('app')
 
-            app.innerHTML = component.detail;
+            app.innerHTML = component.header + component.detail + component.footer;
 
             view.showDetail(model.currentProductInfo)
 
@@ -350,7 +459,30 @@ view.showComponent = function (name) {
                 view.showComponent("showCart")
             }
 
-            
+            let shopping1 = document.getElementById("navbar-column-1")
+
+            shopping1.onclick = shoppingHandler
+
+            let shopping2 = document.getElementById("navbar-column-2")
+
+            shopping2.onclick = shoppingHandler
+
+            let shopping3 = document.getElementById("navbar-column-3")
+
+            shopping3.onclick = shoppingHandler
+
+            let shopping4 = document.getElementById("navbar-column-4")
+
+            shopping4.onclick = shoppingHandler
+
+
+            function shoppingHandler() {
+
+                view.showComponent('shopPage1')
+                
+            }
+
+
 
             let logIn = document.getElementById('sign-in')
 
@@ -372,7 +504,7 @@ view.showComponent = function (name) {
 
             defaultFunction()
 
-            
+
 
             break
 
@@ -382,7 +514,7 @@ view.showComponent = function (name) {
 
             let app = document.getElementById('app')
 
-            app.innerHTML = component.showCart;
+            app.innerHTML = component.header + component.showCart + component.footer;
 
             let shopBtn = document.getElementById('shop')
 
@@ -390,6 +522,29 @@ view.showComponent = function (name) {
 
             function showListHandler() {
                 view.showComponent('shopPage1')
+            }
+
+            let shopping1 = document.getElementById("navbar-column-1")
+
+            shopping1.onclick = shoppingHandler
+
+            let shopping2 = document.getElementById("navbar-column-2")
+
+            shopping2.onclick = shoppingHandler
+
+            let shopping3 = document.getElementById("navbar-column-3")
+
+            shopping3.onclick = shoppingHandler
+
+            let shopping4 = document.getElementById("navbar-column-4")
+
+            shopping4.onclick = shoppingHandler
+
+
+            function shoppingHandler() {
+
+                view.showComponent('shopPage1')
+                
             }
 
             defaultFunction()
@@ -414,7 +569,7 @@ view.showComponent = function (name) {
 
             view.showCartList()
 
-            
+
 
             break
 
@@ -578,7 +733,7 @@ view.showPage = function () {
                             ${info.name}</div>          
                         <div class="price-container">
                             <div class="price-tag">
-                            ${info.price}
+                            $ ${info.price}
                             </div>          
                         </div>          
                     </div>
@@ -626,7 +781,7 @@ view.showDetail = function (info) {
 
             <li id="price-tag-product" class="tag-product">
                 <h3>
-                    ${info.price}
+                    $ ${info.price}
                 </h3>
             </li>
             <li id="brief-tag-product" class="tag-product">
@@ -741,19 +896,19 @@ view.showCartList = function () {
                                 ${item[1]}
                             </div>
                         </div>
-                        <div class="cart-product">${Math.round(item[0].price * item[1] * 100)/100}</div>
+                        <div class="cart-product">${Math.round(item[0].price * item[1] * 100) / 100}</div>
                     </div>
         `
-        subTotal += Math.round(item[0].price * item[1] * 100)/100
+        subTotal += Math.round(item[0].price * item[1] * 100) / 100
     }
 
     let checkOutContainer = document.getElementById("check-out-corner-container")
-    checkOutContainer.innerHTML =`
+    checkOutContainer.innerHTML = `
     <div class="check-out-corner">
 
                             <div class="check-out-row" id="check-out-row-1">
                                 <p class="check-out-title">Subtotal</p>
-                                <p class="subtotal-price">${subTotal}</p>
+                                <p class="subtotal-price">$${subTotal}</p>
                             </div>
                             <div class="check-out-row" id="check-out-row-2">
                                 <p class="check-out-title">Shipping</p>
@@ -761,16 +916,36 @@ view.showCartList = function () {
                             </div>
                             <div class="check-out-row">
                                 <p class="check-out-title" id="total-title">TOTAL</p>
-                                <p class="total-price">${subTotal}</p>
+                                <p class="total-price">$${subTotal}</p>
                             </div>
 
-                            <button class="shop-btn" id="checkOut-btn">
+                            <button class="shop-btn" id="checkOut-btn" >
                                 Check Out
                             </button>
                         </div>
         
         `
+
+    let checkOut = document.getElementById("checkOut-btn")
+
+    checkOut.onclick = afterShopping
+
+    function afterShopping() {
+
+
+        if (cartList[0]) {
+
+            alert("Thank You")
+            window.location.reload(false);
+
+        }
+
+
     }
+
+
+}
+
 
 
 

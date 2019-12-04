@@ -1,7 +1,7 @@
 const component = {}
 
-component.default = `
-<header>
+
+component.header = `<header>
 <div class="main-header">
     <div class="left-header">
 
@@ -20,7 +20,7 @@ component.default = `
                     <ul id="navbar-ul">
                         <li class="navbar-container-li">
 
-                            <div class="navbar-column">
+                            <div class="navbar-column" id="navbar-column-1">
 
                                 <a href="#" class="hover-to-zoom">
 
@@ -37,7 +37,7 @@ component.default = `
 
                         <li class="navbar-container-li">
 
-                            <div class="navbar-column">
+                            <div class="navbar-column" id="navbar-column-2">
 
                                 <a href="#" class="hover-to-zoom">
 
@@ -54,7 +54,7 @@ component.default = `
 
                         <li class="navbar-container-li">
 
-                            <div class="navbar-column">
+                            <div class="navbar-column" id="navbar-column-3">
 
                                 <a href="#" class="hover-to-zoom">
 
@@ -71,7 +71,7 @@ component.default = `
 
                         <li class="navbar-container-li">
 
-                            <div class="navbar-column">
+                            <div class="navbar-column" id="navbar-column-4">
 
                                 <a href="#" class="hover-to-zoom">
 
@@ -245,7 +245,89 @@ component.default = `
 </div>
 
 
-</header>
+</header>`
+
+component.footer = `
+
+<footer class="footer-main">
+
+<div class="footer-top-container">
+    <div class="footer-top">
+        <h4>HEAD IT FIRST</h4>
+        <p>Sign up and save on your first order.
+            Be the first to get access to limited-edition products,
+            exclusive music performances, and athlete stories.</p>
+        <div class="email-container">
+            <input type="email" name="email" placeholder="Email" class="email-btn">
+
+            <button class="send">Send</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="footer-bottom-container">
+
+    <div class="footer-bottom-column" id="footer-bottom-column-1">
+
+        <div class="footer-bottom-tank">
+
+            <p>F0LLOW US</p>
+
+            <div class="social-icon-container">
+                <a href="#" class="social-icon"><i class="fa-3x fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class=" fa-3x fab fa-youtube"></i></a>
+                <a href="" class="social-icon"><i class=" fa-3x fab fa-facebook-square"></i></a>
+                <a href="#" class="social-icon"><i class="fa-3x  fab fa-twitter"></i></a>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="footer-bottom-column" id="footer-bottom-column-2">
+        <div class="paragraph-tank">
+            <div class="paragraph-column">
+                <p class="paragraph-title">Help Center</p>
+                <p class="paragraph-title">Contact Us</p>
+                <p class="paragraph-title">Account</p>
+                <p class="paragraph-title">Product Setup</p>
+                <p class="paragraph-title">Warranty</p>
+                <p class="paragraph-title">Order Status</p>
+            </div>
+            <div class="paragraph-column">
+                <p class="paragraph-title">Custom Product</p>
+                <p class="paragraph-title"> Bulk Orders</p>
+                <p class="paragraph-title">Press Releases</p>
+
+            </div>
+            <div class="paragraph-column">
+                <p class="paragraph-title">Our Story</p>
+                <p class="paragraph-title">Born in PC</p>
+                <p class="paragraph-title">Protect Our Winters</p>
+                <p class="paragraph-title">Careers</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom-column" id="footer-bottom-column-3">
+        <div class="podcast-container">
+            <p>SUBSRCIBE TO OUR PODCAST</p>
+            <div class="podcast-tank">
+                <a href="#" class="paragraph-title">iTunes</a>
+                <a href="#" class="paragraph-title">Spotify</a>
+                <a href="#" class="paragraph-title">YouTube</a>
+            </div>
+        </div>
+
+
+    </div>
+ </footer>
+
+`
+component.default = `
+
 
 <main class="main">
 
@@ -319,332 +401,52 @@ component.default = `
 
 </main>
 
-<footer class="footer-main">
+`
 
-<div class="footer-top-container">
-    <div class="footer-top">
-        <h4>HEAD IT FIRST</h4>
-        <p>Sign up and save on your first order.
-            Be the first to get access to limited-edition products,
-            exclusive music performances, and athlete stories.</p>
-        <div class="email-container">
-            <input type="email" name="email" placeholder="Email" class="email-btn">
+component.user = `
+<main>
+<div id="main-user">
 
-            <button class="send">Send</button>
+    <div class="grey-navbar">
 
+        <section class="grey-navbar-container">
+
+            <div class="navbar-index">
+                <button class="navbar-button" onclick="tab(event, 'me')">About Me</button>
+            </div>
+
+            <div class="navbar-index">
+                <button class="navbar-button" onclick="tab(event, 'order')">Order</button>
+            </div>
+
+            <div class="navbar-index">
+                <button class="navbar-button" id="sign-out">Sign Out</button>
+            </div>
+
+        </section>
+
+    </div>
+
+    <div class="main-detail">
+
+        <div class="input-infor" id='me'>
+            Nice to see you again:
+            <span id="name-user">ABC</span>
+        </div>
+
+        <div class="input-infor" id='order'>
+            abc
         </div>
 
     </div>
 
 </div>
 
-<div class="footer-bottom-container">
-
-    <div class="footer-bottom-column" id="footer-bottom-column-1">
-
-        <div class="footer-bottom-tank">
-
-            <p>F0LLOW US</p>
-
-            <div class="social-icon-container">
-                <a href="#" class="social-icon"><i class="fa-3x fab fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class=" fa-3x fab fa-youtube"></i></a>
-                <a href="" class="social-icon"><i class=" fa-3x fab fa-facebook-square"></i></a>
-                <a href="#" class="social-icon"><i class="fa-3x  fab fa-twitter"></i></a>
-            </div>
-
-        </div>
-
-    </div>
-    <div class="footer-bottom-column" id="footer-bottom-column-2">
-        <div class="paragraph-tank">
-            <div class="paragraph-column">
-                <p class="paragraph-title">Help Center</p>
-                <p class="paragraph-title">Contact Us</p>
-                <p class="paragraph-title">Account</p>
-                <p class="paragraph-title">Product Setup</p>
-                <p class="paragraph-title">Warranty</p>
-                <p class="paragraph-title">Order Status</p>
-            </div>
-            <div class="paragraph-column">
-                <p class="paragraph-title">Custom Product</p>
-                <p class="paragraph-title"> Bulk Orders</p>
-                <p class="paragraph-title">Press Releases</p>
-
-            </div>
-            <div class="paragraph-column">
-                <p class="paragraph-title">Our Story</p>
-                <p class="paragraph-title">Born in PC</p>
-                <p class="paragraph-title">Protect Our Winters</p>
-                <p class="paragraph-title">Careers</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer-bottom-column" id="footer-bottom-column-3">
-        <div class="podcast-container">
-            <p>SUBSRCIBE TO OUR PODCAST</p>
-            <div class="podcast-tank">
-                <a href="#" class="paragraph-title">iTunes</a>
-                <a href="#" class="paragraph-title">Spotify</a>
-                <a href="#" class="paragraph-title">YouTube</a>
-            </div>
-        </div>
-
-
-    </div>
-
-
-</footer>
+</main>
 
 `
 
 component.logIn = `
-<header>
-<div class="main-header">
-    <div class="left-header">
-
-        <a href="./index.html"><img src="./image/logo.png" alt="logo" width="40px" height="33px"
-                class="slogan-img"></a>
-        <a href="./index.html" class="slogan-img"><img src="./image/slogan.png" alt="" width="150px"
-                height="37px" id="slogan"></a>
-
-        <ul class="header-list" id="left-header-list">
-
-            <li class="navbar-list" id="navbar-list-1">
-
-                <a href="#" class="left-navbar-list-anchor" id="shop">Shop</a>
-
-                <div class="navbar-container">
-                    <ul id="navbar-ul">
-                        <li class="navbar-container-li">
-
-                            <div class="navbar-column">
-
-                                <a href="#" class="hover-to-zoom">
-
-                                    <div class="navbar-background" style="background-image: url('https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/navigation/v2/desktop-dropdown-1-1.jpg?t=234');
-                                            background-size: 315px 100px">
-
-                                        <p class="navbar-sub">HEADPHONES</p>
-
-                                    </div>
-
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="navbar-container-li">
-
-                            <div class="navbar-column">
-
-                                <a href="#" class="hover-to-zoom">
-
-                                    <div class="navbar-background" style="background-image: url('https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/navigation/v2/desktop-dropdown-1-2.jpg?t=234');
-                                                background-size: 315px 100px">
-
-                                        <p class="navbar-sub">EARPUDS</p>
-
-                                    </div>
-
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="navbar-container-li">
-
-                            <div class="navbar-column">
-
-                                <a href="#" class="hover-to-zoom">
-
-                                    <div class="navbar-background" style="background-image: url('https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/navigation/v2/desktop-dropdown-1-3.jpg?t=234');
-                                                    background-size: 315px 100px">
-
-                                        <p class="navbar-sub">ACCESSORIES</p>
-
-                                    </div>
-
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="navbar-container-li">
-
-                            <div class="navbar-column">
-
-                                <a href="#" class="hover-to-zoom">
-
-                                    <div class="navbar-background" style="background-image: url('https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/navigation/v2/desktop-dropdown-1-4.jpg?t=234');
-                                                background-size: 315px 100px">
-
-                                        <p class="navbar-sub">SPECIALS</p>
-
-                                    </div>
-
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <div class="navbar-title">
-                        <div class="navbar-sub-column">
-                            <a href="#">
-                                <p class="navbar-sub-detail">Wireless Headphones</p><a>
-                                    <a href="">
-                                        <p class="navbar-sub-detail">Wired Headphones</p>
-                                    </a>
-                                    <a href="#">
-                                        <p class="navbar-sub-detail">Crusher ANC-NEW</p>
-                                    </a>
-
-                        </div>
-
-                        <div class="navbar-sub-column">
-                            <a href="#">
-                                <p class="navbar-sub-detail">Wireless Earpuds</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Wired Earbuds</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Indy True Wireless</p>
-                            </a>
-
-                        </div>
-
-                        <div class="navbar-sub-column">
-                            <a href="#">
-                                <p class="navbar-sub-detail">Backpacks, Travel Kit & Cases</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Hats</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Speakers</p>
-                            </a>
-                        </div>
-
-                        <div class="navbar-sub-column">
-                            <a href="#">
-                                <p class="navbar-sub-detail">12 Moods</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Custom Product</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">New Arrival</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Sale</p>
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class="show-all">
-                        <div><a href="#" class="show-all-detail">Shop all Headphones</a></div>
-                        <div><a href="#" class="show-all-detail">Shop all Earpuds</a></div>
-                        <div><a href="#" class="show-all-detail">Shop all Accessories</a></div>
-                        <div></div>
-
-                    </div>
-                </div>
-
-            </li>
-            <li class="navbar-list" id="navbar-list-2">
-                <a href="#" class="left-navbar-list-anchor">12 MOODS</a>
-            </li>
-        </ul>
-
-
-    </div>
-
-    <div class="right-header">
-
-        <ul class="header-list">
-            <li class="navbar-list" id="navbar-list-3">
-                <a href="#" class="right-navbar-list-anchor">Location</a>
-
-                <div class="navbar-container">
-                    <ul class="location">
-
-                        <li class="local-area">NORTH AMERICA
-
-                            <p class="location-store">Canada</p>
-                            <p class="location-store">Mexico</p>
-                            <p class="location-store">United State</p>
-                        </li>
-
-                        <li class="local-area">
-                            EUROPE / MIDDLE EARTH
-                            <p class="location-store">Austria</p>
-                            <p class="location-store">France</p>
-                            <p class="location-store">Germany</p>
-                            <p class="location-store">Switzerland</p>
-                            <p class="location-store">United Kingdom</p>
-                            <p class="location-store">Europe (EN)</p>
-                            <p class="location-store">Other Middle Earth Countries</p>
-                        </li>
-
-                        <li class="local-area">AFRICA
-                            <p class="location-store">South Africa</p><br>
-                            <div class="location" id="local-area-asia">ASIA
-                                <p class="location-store">India</p>
-                                <p class="location-store">Japan</p>
-                                <p class="location-store">South Korea</p>
-                                <p class="location-store">Taiwan</p>
-                            </div>
-
-
-                        </li>
-                        <li class="local-area" id="local-area-pacific">PACIFIC
-                            <p class="location-store">Australia</p>
-                            <p class="location-store">New Zealand</p>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-
-            <li class="navbar-list" id="navbar-list-4">
-                <a href="#" class="right-navbar-list-anchor">Support</a>
-
-                <div class="navbar-container">
-                    <ul class="service-support">
-                        <li class="service-support-service">HELP &nbsp; CENTER</li>
-                        <li class="service-support-service">PRODUCT &nbsp; SETUP</li>
-                        <li class="service-support-service">WARRANTY</li>
-                        <li class="service-support-service">ORDER &nbsp; STATUS</li>
-                        <li class="service-support-service">INTERNATIONAL &nbsp; SUPPORT</li>
-
-                    </ul>
-
-                </div>
-            </li>
-            <li class="navbar-list"><a href="#"><i class="material-icons" id="sign-in">perm_identity</i></a></li>
-
-            <li class="navbar-list" id="navbar-list-6">
-                <a href="#"><i class="material-icons" id="search-button">search</i></a>
-                <div id="search-navbar-container">
-                    <div class="search-navbar">
-                        <form action="" class="search-input">
-                            <input type="search" class="search-btn" placeholder="Search">
-                            <a class="exit-btn" id="exit" href="#"><i class=" fa-1x fas fa-times"></i></a>
-                        </form>
-                    </div>
-
-                </div>
-            </li>
-            <li class="navbar-list"><i id="cart-btn" class="material-icons">work_outline</i></li>
-
-
-        </ul>
-
-    </div>
-
-</div>
-
-
-</header>
 
 <main>
 <div class="log-in-form">
@@ -701,709 +503,10 @@ component.logIn = `
 
     </div>
 </div>
-
-
-
-
 </main>
 
-<footer class="footer-main">
-
-<div class="footer-top-container">
-    <div class="footer-top">
-        <h4>HEAD IT FIRST</h4>
-        <p>Sign up and save on your first order.
-            Be the first to get access to limited-edition products,
-            exclusive music performances, and athlete stories.</p>
-        <div class="email-container">
-            <input type="email" name="email" placeholder="Email" class="email-btn">
-
-            <button type="submit" class="send">Send</button>
-
-        </div>
-
-    </div>
-
-</div>
-
-<div class="footer-bottom-container">
-
-    <div class="footer-bottom-column" id="footer-bottom-column-1">
-
-        <div class="footer-bottom-tank">
-
-            <p>F0LLOW US</p>
-
-            <div class="social-icon-container">
-                <a href="#" class="social-icon"><i class="fa-3x fab fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class=" fa-3x fab fa-youtube"></i></a>
-                <a href="" class="social-icon"><i class=" fa-3x fab fa-facebook-square"></i></a>
-                <a href="#" class="social-icon"><i class="fa-3x  fab fa-twitter"></i></a>
-            </div>
-
-        </div>
-
-    </div>
-    <div class="footer-bottom-column" id="footer-bottom-column-2">
-        <div class="paragraph-tank">
-            <div class="paragraph-column">
-                <p class="paragraph-title">Help Center</p>
-                <p class="paragraph-title">Contact Us</p>
-                <p class="paragraph-title">Account</p>
-                <p class="paragraph-title">Product Setup</p>
-                <p class="paragraph-title">Warranty</p>
-                <p class="paragraph-title">Order Status</p>
-            </div>
-            <div class="paragraph-column">
-                <p class="paragraph-title">Custom Product</p>
-                <p class="paragraph-title"> Bulk Orders</p>
-                <p class="paragraph-title">Press Releases</p>
-
-            </div>
-            <div class="paragraph-column">
-                <p class="paragraph-title">Our Story</p>
-                <p class="paragraph-title">Born in PC</p>
-                <p class="paragraph-title">Protect Our Winters</p>
-                <p class="paragraph-title">Careers</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer-bottom-column" id="footer-bottom-column-3">
-        <div class="podcast-container">
-            <p>SUBSRCIBE TO OUR PODCAST</p>
-            <div class="podcast-tank">
-                <a href="#" class="paragraph-title">iTunes</a>
-                <a href="#" class="paragraph-title">Spotify</a>
-                <a href="#" class="paragraph-title">YouTube</a>
-            </div>
-        </div>
-
-
-    </div>
-
-</footer>
-
 `
-component.user = `
-<header>
-<div class="main-header">
-    <div class="left-header">
-
-        <a href="./index.html"><img src="./image/logo.png" alt="logo" width="40px" height="33px"
-                class="slogan-img"></a>
-        <a href="./index.html" class="slogan-img"><img src="./image/slogan.png" alt="" width="150px"
-                height="37px" id="slogan"></a>
-
-        <ul class="header-list" id="left-header-list">
-
-            <li class="navbar-list" id="navbar-list-1">
-
-                <a href="#" class="left-navbar-list-anchor" id="shop">Shop</a>
-
-                <div class="navbar-container">
-                    <ul id="navbar-ul">
-                        <li class="navbar-container-li">
-
-                            <div class="navbar-column">
-
-                                <a href="#" class="hover-to-zoom">
-
-                                    <div class="navbar-background" style="background-image: url('https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/navigation/v2/desktop-dropdown-1-1.jpg?t=234');
-                                            background-size: 315px 100px">
-
-                                        <p class="navbar-sub">HEADPHONES</p>
-
-                                    </div>
-
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="navbar-container-li">
-
-                            <div class="navbar-column">
-
-                                <a href="#" class="hover-to-zoom">
-
-                                    <div class="navbar-background" style="background-image: url('https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/navigation/v2/desktop-dropdown-1-2.jpg?t=234');
-                                                background-size: 315px 100px">
-
-                                        <p class="navbar-sub">EARPUDS</p>
-
-                                    </div>
-
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="navbar-container-li">
-
-                            <div class="navbar-column">
-
-                                <a href="#" class="hover-to-zoom">
-
-                                    <div class="navbar-background" style="background-image: url('https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/navigation/v2/desktop-dropdown-1-3.jpg?t=234');
-                                                    background-size: 315px 100px">
-
-                                        <p class="navbar-sub">ACCESSORIES</p>
-
-                                    </div>
-
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="navbar-container-li">
-
-                            <div class="navbar-column">
-
-                                <a href="#" class="hover-to-zoom">
-
-                                    <div class="navbar-background" style="background-image: url('https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/navigation/v2/desktop-dropdown-1-4.jpg?t=234');
-                                                background-size: 315px 100px">
-
-                                        <p class="navbar-sub">SPECIALS</p>
-
-                                    </div>
-
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <div class="navbar-title">
-                        <div class="navbar-sub-column">
-                            <a href="#">
-                                <p class="navbar-sub-detail">Wireless Headphones</p><a>
-                                    <a href="">
-                                        <p class="navbar-sub-detail">Wired Headphones</p>
-                                    </a>
-                                    <a href="#">
-                                        <p class="navbar-sub-detail">Crusher ANC-NEW</p>
-                                    </a>
-
-                        </div>
-
-                        <div class="navbar-sub-column">
-                            <a href="#">
-                                <p class="navbar-sub-detail">Wireless Earpuds</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Wired Earbuds</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Indy True Wireless</p>
-                            </a>
-
-                        </div>
-
-                        <div class="navbar-sub-column">
-                            <a href="#">
-                                <p class="navbar-sub-detail">Backpacks, Travel Kit & Cases</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Hats</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Speakers</p>
-                            </a>
-                        </div>
-
-                        <div class="navbar-sub-column">
-                            <a href="#">
-                                <p class="navbar-sub-detail">12 Moods</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Custom Product</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">New Arrival</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Sale</p>
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class="show-all">
-                        <div><a href="#" class="show-all-detail">Shop all Headphones</a></div>
-                        <div><a href="#" class="show-all-detail">Shop all Earpuds</a></div>
-                        <div><a href="#" class="show-all-detail">Shop all Accessories</a></div>
-                        <div></div>
-
-                    </div>
-                </div>
-
-            </li>
-            <li class="navbar-list" id="navbar-list-2">
-                <a href="#" class="left-navbar-list-anchor">12 MOODS</a>
-            </li>
-        </ul>
-
-
-    </div>
-
-    <div class="right-header">
-
-        <ul class="header-list">
-            <li class="navbar-list" id="navbar-list-3">
-                <a href="#" class="right-navbar-list-anchor">Location</a>
-
-                <div class="navbar-container">
-                    <ul class="location">
-
-                        <li class="local-area">NORTH AMERICA
-
-                            <p class="location-store">Canada</p>
-                            <p class="location-store">Mexico</p>
-                            <p class="location-store">United State</p>
-                        </li>
-
-                        <li class="local-area">
-                            EUROPE / MIDDLE EARTH
-                            <p class="location-store">Austria</p>
-                            <p class="location-store">France</p>
-                            <p class="location-store">Germany</p>
-                            <p class="location-store">Switzerland</p>
-                            <p class="location-store">United Kingdom</p>
-                            <p class="location-store">Europe (EN)</p>
-                            <p class="location-store">Other Middle Earth Countries</p>
-                        </li>
-
-                        <li class="local-area">AFRICA
-                            <p class="location-store">South Africa</p><br>
-                            <div class="location" id="local-area-asia">ASIA
-                                <p class="location-store">India</p>
-                                <p class="location-store">Japan</p>
-                                <p class="location-store">South Korea</p>
-                                <p class="location-store">Taiwan</p>
-                            </div>
-
-
-                        </li>
-                        <li class="local-area" id="local-area-pacific">PACIFIC
-                            <p class="location-store">Australia</p>
-                            <p class="location-store">New Zealand</p>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-
-            <li class="navbar-list" id="navbar-list-4">
-                <a href="#" class="right-navbar-list-anchor">Support</a>
-
-                <div class="navbar-container">
-                    <ul class="service-support">
-                        <li class="service-support-service">HELP &nbsp; CENTER</li>
-                        <li class="service-support-service">PRODUCT &nbsp; SETUP</li>
-                        <li class="service-support-service">WARRANTY</li>
-                        <li class="service-support-service">ORDER &nbsp; STATUS</li>
-                        <li class="service-support-service">INTERNATIONAL &nbsp; SUPPORT</li>
-
-                    </ul>
-
-                </div>
-            </li>
-            <li class="navbar-list"><a href="#"><i class="material-icons" id="sign-in">perm_identity</i></a></li>
-
-            <li class="navbar-list" id="navbar-list-6">
-                <a href="#"><i class="material-icons" id="search-button">search</i></a>
-                <div id="search-navbar-container">
-                    <div class="search-navbar">
-                        <form action="" class="search-input">
-                            <input type="search" class="search-btn" placeholder="Search">
-                            <a class="exit-btn" id="exit" href="#"><i class=" fa-1x fas fa-times"></i></a>
-                        </form>
-                    </div>
-
-                </div>
-            </li>
-            <li class="navbar-list"><i id="cart-btn" class="material-icons">work_outline</i></li>
-
-
-        </ul>
-
-    </div>
-
-</div>
-
-
-</header>
-
-<main>
-<div id="main-user">
-
-    <div class="grey-navbar">
-
-        <section class="grey-navbar-container">
-
-            <div class="navbar-index">
-                <button class="navbar-button" onclick="tab(event, 'me')">About Me</button>
-            </div>
-
-            <div class="navbar-index">
-                <button class="navbar-button" onclick="tab(event, 'order')">Order</button>
-            </div>
-
-            <div class="navbar-index">
-                <button class="navbar-button" id="sign-out">Sign Out</button>
-            </div>
-
-        </section>
-
-    </div>
-
-    <div class="main-detail">
-
-        <div class="input-infor" id='me'>
-            Nice to see you again:
-            <span id="name-user">ABC</span>
-        </div>
-
-        <div class="input-infor" id='order'>
-            abc
-        </div>
-
-    </div>
-
-</div>
-
-</main>
-
-<footer class="footer-main">
-
-<div class="footer-top-container">
-    <div class="footer-top">
-        <h4>HEAD IT FIRST</h4>
-        <p>Sign up and save on your first order.
-            Be the first to get access to limited-edition products,
-            exclusive music performances, and athlete stories.</p>
-        <div class="email-container">
-            <input type="email" name="email" placeholder="Email" class="email-btn">
-
-            <button type="submit" class="send">Send</button>
-
-        </div>
-
-    </div>
-
-</div>
-
-<div class="footer-bottom-container">
-
-    <div class="footer-bottom-column" id="footer-bottom-column-1">
-
-        <div class="footer-bottom-tank">
-
-            <p>F0LLOW US</p>
-
-            <div class="social-icon-container">
-                <a href="#" class="social-icon"><i class="fa-3x fab fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class=" fa-3x fab fa-youtube"></i></a>
-                <a href="" class="social-icon"><i class=" fa-3x fab fa-facebook-square"></i></a>
-                <a href="#" class="social-icon"><i class="fa-3x  fab fa-twitter"></i></a>
-            </div>
-
-        </div>
-
-    </div>
-    <div class="footer-bottom-column" id="footer-bottom-column-2">
-        <div class="paragraph-tank">
-            <div class="paragraph-column">
-                <p class="paragraph-title">Help Center</p>
-                <p class="paragraph-title">Contact Us</p>
-                <p class="paragraph-title">Account</p>
-                <p class="paragraph-title">Product Setup</p>
-                <p class="paragraph-title">Warranty</p>
-                <p class="paragraph-title">Order Status</p>
-            </div>
-            <div class="paragraph-column">
-                <p class="paragraph-title">Custom Product</p>
-                <p class="paragraph-title"> Bulk Orders</p>
-                <p class="paragraph-title">Press Releases</p>
-
-            </div>
-            <div class="paragraph-column">
-                <p class="paragraph-title">Our Story</p>
-                <p class="paragraph-title">Born in PC</p>
-                <p class="paragraph-title">Protect Our Winters</p>
-                <p class="paragraph-title">Careers</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer-bottom-column" id="footer-bottom-column-3">
-        <div class="podcast-container">
-            <p>SUBSRCIBE TO OUR PODCAST</p>
-            <div class="podcast-tank">
-                <a href="#" class="paragraph-title">iTunes</a>
-                <a href="#" class="paragraph-title">Spotify</a>
-
-                <a href="#" class="paragraph-title">YouTube</a>
-            </div>
-        </div>
-
-
-    </div>
-
-
-</footer>
-`
-
-
 component.register = `
-
-<header>
-<div class="main-header">
-    <div class="left-header">
-
-        <a href="./index.html"><img src="./image/logo.png" alt="logo" width="40px" height="33px"
-                class="slogan-img"></a>
-        <a href="./index.html" class="slogan-img"><img src="./image/slogan.png" alt="" width="150px"
-                height="37px" id="slogan"></a>
-
-        <ul class="header-list" id="left-header-list">
-
-            <li class="navbar-list" id="navbar-list-1">
-
-                <a href="#" class="left-navbar-list-anchor" id="shop">Shop</a>
-
-                <div class="navbar-container">
-                    <ul id="navbar-ul">
-                        <li class="navbar-container-li">
-
-                            <div class="navbar-column">
-
-                                <a href="#" class="hover-to-zoom">
-
-                                    <div class="navbar-background" style="background-image: url('https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/navigation/v2/desktop-dropdown-1-1.jpg?t=234');
-                                            background-size: 315px 100px">
-
-                                        <p class="navbar-sub">HEADPHONES</p>
-
-                                    </div>
-
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="navbar-container-li">
-
-                            <div class="navbar-column">
-
-                                <a href="#" class="hover-to-zoom">
-
-                                    <div class="navbar-background" style="background-image: url('https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/navigation/v2/desktop-dropdown-1-2.jpg?t=234');
-                                                background-size: 315px 100px">
-
-                                        <p class="navbar-sub">EARPUDS</p>
-
-                                    </div>
-
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="navbar-container-li">
-
-                            <div class="navbar-column">
-
-                                <a href="#" class="hover-to-zoom">
-
-                                    <div class="navbar-background" style="background-image: url('https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/navigation/v2/desktop-dropdown-1-3.jpg?t=234');
-                                                    background-size: 315px 100px">
-
-                                        <p class="navbar-sub">ACCESSORIES</p>
-
-                                    </div>
-
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="navbar-container-li">
-
-                            <div class="navbar-column">
-
-                                <a href="#" class="hover-to-zoom">
-
-                                    <div class="navbar-background" style="background-image: url('https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/navigation/v2/desktop-dropdown-1-4.jpg?t=234');
-                                                background-size: 315px 100px">
-
-                                        <p class="navbar-sub">SPECIALS</p>
-
-                                    </div>
-
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <div class="navbar-title">
-                        <div class="navbar-sub-column">
-                            <a href="#">
-                                <p class="navbar-sub-detail">Wireless Headphones</p><a>
-                                    <a href="">
-                                        <p class="navbar-sub-detail">Wired Headphones</p>
-                                    </a>
-                                    <a href="#">
-                                        <p class="navbar-sub-detail">Crusher ANC-NEW</p>
-                                    </a>
-
-                        </div>
-
-                        <div class="navbar-sub-column">
-                            <a href="#">
-                                <p class="navbar-sub-detail">Wireless Earpuds</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Wired Earbuds</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Indy True Wireless</p>
-                            </a>
-
-                        </div>
-
-                        <div class="navbar-sub-column">
-                            <a href="#">
-                                <p class="navbar-sub-detail">Backpacks, Travel Kit & Cases</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Hats</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Speakers</p>
-                            </a>
-                        </div>
-
-                        <div class="navbar-sub-column">
-                            <a href="#">
-                                <p class="navbar-sub-detail">12 Moods</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Custom Product</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">New Arrival</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Sale</p>
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class="show-all">
-                        <div><a href="#" class="show-all-detail">Shop all Headphones</a></div>
-                        <div><a href="#" class="show-all-detail">Shop all Earpuds</a></div>
-                        <div><a href="#" class="show-all-detail">Shop all Accessories</a></div>
-                        <div></div>
-
-                    </div>
-                </div>
-
-            </li>
-            <li class="navbar-list" id="navbar-list-2">
-                <a href="#" class="left-navbar-list-anchor">12 MOODS</a>
-            </li>
-        </ul>
-
-
-    </div>
-
-    <div class="right-header">
-
-        <ul class="header-list">
-            <li class="navbar-list" id="navbar-list-3">
-                <a href="#" class="right-navbar-list-anchor">Location</a>
-
-                <div class="navbar-container">
-                    <ul class="location">
-
-                        <li class="local-area">NORTH AMERICA
-
-                            <p class="location-store">Canada</p>
-                            <p class="location-store">Mexico</p>
-                            <p class="location-store">United State</p>
-                        </li>
-
-                        <li class="local-area">
-                            EUROPE / MIDDLE EARTH
-                            <p class="location-store">Austria</p>
-                            <p class="location-store">France</p>
-                            <p class="location-store">Germany</p>
-                            <p class="location-store">Switzerland</p>
-                            <p class="location-store">United Kingdom</p>
-                            <p class="location-store">Europe (EN)</p>
-                            <p class="location-store">Other Middle Earth Countries</p>
-                        </li>
-
-                        <li class="local-area">AFRICA
-                            <p class="location-store">South Africa</p><br>
-                            <div class="location" id="local-area-asia">ASIA
-                                <p class="location-store">India</p>
-                                <p class="location-store">Japan</p>
-                                <p class="location-store">South Korea</p>
-                                <p class="location-store">Taiwan</p>
-                            </div>
-
-
-                        </li>
-                        <li class="local-area" id="local-area-pacific">PACIFIC
-                            <p class="location-store">Australia</p>
-                            <p class="location-store">New Zealand</p>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-
-            <li class="navbar-list" id="navbar-list-4">
-                <a href="#" class="right-navbar-list-anchor">Support</a>
-
-                <div class="navbar-container">
-                    <ul class="service-support">
-                        <li class="service-support-service">HELP &nbsp; CENTER</li>
-                        <li class="service-support-service">PRODUCT &nbsp; SETUP</li>
-                        <li class="service-support-service">WARRANTY</li>
-                        <li class="service-support-service">ORDER &nbsp; STATUS</li>
-                        <li class="service-support-service">INTERNATIONAL &nbsp; SUPPORT</li>
-
-                    </ul>
-
-                </div>
-            </li>
-            <li class="navbar-list">
-                <a href="#">
-                    <i class="material-icons" id="sign-in">perm_identity</i>
-                </a>
-            </li>
-
-            <li class="navbar-list" id="navbar-list-6">
-                <a href="#"><i class="material-icons" id="search-button">search</i></a>
-                <div id="search-navbar-container">
-                    <div class="search-navbar">
-                        <form action="" class="search-input">
-                            <input type="search" class="search-btn" placeholder="Search">
-                            <a class="exit-btn" id="exit" href="#"><i class=" fa-1x fas fa-times"></i></a>
-                        </form>
-                    </div>
-
-                </div>
-            </li>
-            <li class="navbar-list"><i id="cart-btn" class="material-icons">work_outline</i></li>
-
-
-        </ul>
-
-    </div>
-
-</div>
-
-
-</header>
 
 <main>
 <form class="register-container" id="register-container">
@@ -1469,332 +572,11 @@ component.register = `
 
 </main>
 
-<footer class="footer-main">
 
-<div class="footer-top-container">
-    <div class="footer-top">
-        <h4>HEAD IT FIRST</h4>
-        <p>Sign up and save on your first order.
-            Be the first to get access to limited-edition products,
-            exclusive music performances, and athlete stories.</p>
-        <div class="email-container">
-            <input type="email" name="email" placeholder="Email" class="email-btn">
-
-            <button type="submit" class="send">Send</button>
-
-        </div>
-
-    </div>
-
-</div>
-
-<div class="footer-bottom-container">
-
-    <div class="footer-bottom-column" id="footer-bottom-column-1">
-
-        <div class="footer-bottom-tank">
-
-            <p>F0LLOW US</p>
-
-            <div class="social-icon-container">
-                <a href="#" class="social-icon"><i class="fa-3x fab fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class=" fa-3x fab fa-youtube"></i></a>
-                <a href="" class="social-icon"><i class=" fa-3x fab fa-facebook-square"></i></a>
-                <a href="#" class="social-icon"><i class="fa-3x  fab fa-twitter"></i></a>
-            </div>
-
-        </div>
-
-    </div>
-    <div class="footer-bottom-column" id="footer-bottom-column-2">
-        <div class="paragraph-tank">
-            <div class="paragraph-column">
-                <p class="paragraph-title">Help Center</p>
-                <p class="paragraph-title">Contact Us</p>
-                <p class="paragraph-title">Account</p>
-                <p class="paragraph-title">Product Setup</p>
-                <p class="paragraph-title">Warranty</p>
-                <p class="paragraph-title">Order Status</p>
-            </div>
-            <div class="paragraph-column">
-                <p class="paragraph-title">Custom Product</p>
-                <p class="paragraph-title"> Bulk Orders</p>
-                <p class="paragraph-title">Press Releases</p>
-
-            </div>
-            <div class="paragraph-column">
-                <p class="paragraph-title">Our Story</p>
-                <p class="paragraph-title">Born in PC</p>
-                <p class="paragraph-title">Protect Our Winters</p>
-                <p class="paragraph-title">Careers</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer-bottom-column" id="footer-bottom-column-3">
-        <div class="podcast-container">
-            <p>SUBSRCIBE TO OUR PODCAST</p>
-            <div class="podcast-tank">
-                <a href="#" class="paragraph-title">iTunes</a>
-                <a href="#" class="paragraph-title">Spotify</a>
-                <a href="#" class="paragraph-title">YouTube</a>
-            </div>
-        </div>
-
-
-    </div>
-
-
-</footer>
 
 `
 
 component.shopPage1 = `
-<header>
-<div class="main-header">
-    <div class="left-header">
-
-        <a href="./index.html"><img src="./image/logo.png" alt="logo"
-                width="40px" height="33px" class="slogan-img"></a>
-        <a href="./index.html" class="slogan-img"><img
-                src="./image/slogan.png" alt="" width="150px" height="37px" id="slogan"></a>
-
-        <ul class="header-list" id="left-header-list">
-
-            <li class="navbar-list" id="navbar-list-1">
-
-                <a href="#" class="left-navbar-list-anchor" id="shop">Shop</a>
-
-                <div class="navbar-container">
-                    <ul id="navbar-ul">
-                        <li class="navbar-container-li">
-
-                            <div class="navbar-column">
-
-                                <a href="#" class="hover-to-zoom">
-
-                                    <div class="navbar-background" style="background-image: url('https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/navigation/v2/desktop-dropdown-1-1.jpg?t=234');
-                                                    background-size: 315px 100px">
-
-                                        <p class="navbar-sub">HEADPHONES</p>
-
-                                    </div>
-
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="navbar-container-li">
-
-                            <div class="navbar-column">
-
-                                <a href="#" class="hover-to-zoom">
-
-                                    <div class="navbar-background" style="background-image: url('https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/navigation/v2/desktop-dropdown-1-2.jpg?t=234');
-                                                        background-size: 315px 100px">
-
-                                        <p class="navbar-sub">EARPUDS</p>
-
-                                    </div>
-
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="navbar-container-li">
-
-                            <div class="navbar-column">
-
-                                <a href="#" class="hover-to-zoom">
-
-                                    <div class="navbar-background" style="background-image: url('https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/navigation/v2/desktop-dropdown-1-3.jpg?t=234');
-                                                            background-size: 315px 100px">
-
-                                        <p class="navbar-sub">ACCESSORIES</p>
-
-                                    </div>
-
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="navbar-container-li">
-
-                            <div class="navbar-column">
-
-                                <a href="#" class="hover-to-zoom">
-
-                                    <div class="navbar-background" style="background-image: url('https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/navigation/v2/desktop-dropdown-1-4.jpg?t=234');
-                                                        background-size: 315px 100px">
-
-                                        <p class="navbar-sub">SPECIALS</p>
-
-                                    </div>
-
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <div class="navbar-title">
-                        <div class="navbar-sub-column">
-                            <a href="#">
-                                <p class="navbar-sub-detail">Wireless Headphones</p><a>
-                                    <a href="">
-                                        <p class="navbar-sub-detail">Wired Headphones</p>
-                                    </a>
-                                    <a href="#">
-                                        <p class="navbar-sub-detail">Crusher ANC-NEW</p>
-                                    </a>
-
-                        </div>
-
-                        <div class="navbar-sub-column">
-                            <a href="#">
-                                <p class="navbar-sub-detail">Wireless Earpuds</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Wired Earbuds</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Indy True Wireless</p>
-                            </a>
-
-                        </div>
-
-                        <div class="navbar-sub-column">
-                            <a href="#">
-                                <p class="navbar-sub-detail">Backpacks, Travel Kit & Cases</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Hats</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Speakers</p>
-                            </a>
-                        </div>
-
-                        <div class="navbar-sub-column">
-                            <a href="#">
-                                <p class="navbar-sub-detail">12 Moods</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Custom Product</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">New Arrival</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Sale</p>
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class="show-all">
-                        <div><a href="#" class="show-all-detail">Shop all Headphones</a></div>
-                        <div><a href="#" class="show-all-detail">Shop all Earpuds</a></div>
-                        <div><a href="#" class="show-all-detail">Shop all Accessories</a></div>
-                        <div></div>
-
-                    </div>
-                </div>
-
-            </li>
-            <li class="navbar-list" id="navbar-list-2">
-                <a href="#" class="left-navbar-list-anchor">12 MOODS</a>
-            </li>
-        </ul>
-
-
-    </div>
-
-    <div class="right-header">
-
-        <ul class="header-list">
-            <li class="navbar-list" id="navbar-list-3">
-                <a href="#" class="right-navbar-list-anchor">Location</a>
-
-                <div class="navbar-container">
-                    <ul class="location">
-
-                        <li class="local-area">NORTH AMERICA
-
-                            <p class="location-store">Canada</p>
-                            <p class="location-store">Mexico</p>
-                            <p class="location-store">United State</p>
-                        </li>
-
-                        <li class="local-area">
-                            EUROPE / MIDDLE EARTH
-                            <p class="location-store">Austria</p>
-                            <p class="location-store">France</p>
-                            <p class="location-store">Germany</p>
-                            <p class="location-store">Switzerland</p>
-                            <p class="location-store">United Kingdom</p>
-                            <p class="location-store">Europe (EN)</p>
-                            <p class="location-store">Other Middle Earth Countries</p>
-                        </li>
-
-                        <li class="local-area">AFRICA
-                            <p class="location-store">South Africa</p><br>
-                            <div class="location" id="local-area-asia">ASIA
-                                <p class="location-store">India</p>
-                                <p class="location-store">Japan</p>
-                                <p class="location-store">South Korea</p>
-                                <p class="location-store">Taiwan</p>
-                            </div>
-
-
-                        </li>
-                        <li class="local-area" id="local-area-pacific">PACIFIC
-                            <p class="location-store">Australia</p>
-                            <p class="location-store">New Zealand</p>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-
-            <li class="navbar-list" id="navbar-list-4">
-                <a href="#" class="right-navbar-list-anchor">Support</a>
-
-                <div class="navbar-container">
-                    <ul class="service-support">
-                        <li class="service-support-service">HELP &nbsp; CENTER</li>
-                        <li class="service-support-service">PRODUCT &nbsp; SETUP</li>
-                        <li class="service-support-service">WARRANTY</li>
-                        <li class="service-support-service">ORDER &nbsp; STATUS</li>
-                        <li class="service-support-service">INTERNATIONAL &nbsp; SUPPORT</li>
-
-                    </ul>
-
-                </div>
-            </li>
-            <li class="navbar-list"><a href="#"><i class="material-icons" id="sign-in">perm_identity</i></a></li>
-
-            <li class="navbar-list" id="navbar-list-6">
-                <a href="#"><i class="material-icons" id="search-button">search</i></a>
-                <div id="search-navbar-container">
-                    <div class="search-navbar">
-                        <form action="" class="search-input">
-                            <input type="search" class="search-btn" placeholder="Search">
-                            <a class="exit-btn" id="exit" href="#"><i class=" fa-1x fas fa-times"></i></a>
-                        </form>
-                    </div>
-
-                </div>
-            </li>
-            <li class="navbar-list"><i id="cart-btn" class="material-icons">work_outline</i></li>
-
-
-        </ul>
-
-    </div>
-
-</div>
-
-
-</header>
 
 <main>
 <div class="freeship-navbar">
@@ -1852,674 +634,26 @@ component.shopPage1 = `
 
 </main>
 
-<footer class="footer-main">
-
-<div class="footer-top-container">
-    <div class="footer-top">
-        <h4>HEAD IT FIRST</h4>
-        <p>Sign up and save on your first order.
-            Be the first to get access to limited-edition products,
-            exclusive music performances, and athlete stories.</p>
-        <div class="email-container">
-            <input type="email" name="email" placeholder="Email" class="email-btn">
-
-            <button type="submit" class="send">Send</button>
-
-        </div>
-
-    </div>
-
-</div>
-
-<div class="footer-bottom-container">
-
-    <div class="footer-bottom-column" id="footer-bottom-column-1">
-
-        <div class="footer-bottom-tank">
-
-            <p>F0LLOW US</p>
-
-            <div class="social-icon-container">
-                <a href="#" class="social-icon"><i class="fa-3x fab fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class=" fa-3x fab fa-youtube"></i></a>
-                <a href="" class="social-icon"><i class=" fa-3x fab fa-facebook-square"></i></a>
-                <a href="#" class="social-icon"><i class="fa-3x  fab fa-twitter"></i></a>
-            </div>
-
-        </div>
-
-    </div>
-    <div class="footer-bottom-column" id="footer-bottom-column-2">
-        <div class="paragraph-tank">
-            <div class="paragraph-column">
-                <p class="paragraph-title">Help Center</p>
-                <p class="paragraph-title">Contact Us</p>
-                <p class="paragraph-title">Account</p>
-                <p class="paragraph-title">Product Setup</p>
-                <p class="paragraph-title">Warranty</p>
-                <p class="paragraph-title">Order Status</p>
-            </div>
-            <div class="paragraph-column">
-                <p class="paragraph-title">Custom Product</p>
-                <p class="paragraph-title"> Bulk Orders</p>
-                <p class="paragraph-title">Press Releases</p>
-
-            </div>
-            <div class="paragraph-column">
-                <p class="paragraph-title">Our Story</p>
-                <p class="paragraph-title">Born in PC</p>
-                <p class="paragraph-title">Protect Our Winters</p>
-                <p class="paragraph-title">Careers</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer-bottom-column" id="footer-bottom-column-3">
-        <div class="podcast-container">
-            <p>SUBSRCIBE TO OUR PODCAST</p>
-            <div class="podcast-tank">
-                <a href="#" class="paragraph-title">iTunes</a>
-                <a href="#" class="paragraph-title">Spotify</a>
-                <a href="#" class="paragraph-title">YouTube</a>
-            </div>
-        </div>
-
-
-    </div>
-
-
-</footer>
-
 `
 
 component.detail = `
 
-<header>
-<div class="main-header">
-    <div class="left-header">
-        <a href="../docs/index.html"></a>
-        <a href="./index.html"><img src="./image/logo.png" alt="logo" width="40px" height="33px"
-                class="slogan-img"></a>
-        <a href="./index.html" class="slogan-img"><img src="./image/slogan.png" alt="" width="150px"
-                height="37px" id="slogan"></a>
 
-        <ul class="header-list" id="left-header-list">
-
-            <li class="navbar-list" id="navbar-list-1">
-
-                <a href="#" class="left-navbar-list-anchor" id="shop">Shop</a>
-
-                <div class="navbar-container">
-                    <ul id="navbar-ul">
-                        <li class="navbar-container-li">
-
-                            <div class="navbar-column">
-
-                                <a href="#" class="hover-to-zoom">
-
-                                    <div class="navbar-background" style="background-image: url('https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/navigation/v2/desktop-dropdown-1-1.jpg?t=234');
-                                            background-size: 315px 100px">
-
-                                        <p class="navbar-sub">HEADPHONES</p>
-
-                                    </div>
-
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="navbar-container-li">
-
-                            <div class="navbar-column">
-
-                                <a href="#" class="hover-to-zoom">
-
-                                    <div class="navbar-background" style="background-image: url('https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/navigation/v2/desktop-dropdown-1-2.jpg?t=234');
-                                                background-size: 315px 100px">
-
-                                        <p class="navbar-sub">EARPUDS</p>
-
-                                    </div>
-
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="navbar-container-li">
-
-                            <div class="navbar-column">
-
-                                <a href="#" class="hover-to-zoom">
-
-                                    <div class="navbar-background" style="background-image: url('https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/navigation/v2/desktop-dropdown-1-3.jpg?t=234');
-                                                    background-size: 315px 100px">
-
-                                        <p class="navbar-sub">ACCESSORIES</p>
-
-                                    </div>
-
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="navbar-container-li">
-
-                            <div class="navbar-column">
-
-                                <a href="#" class="hover-to-zoom">
-
-                                    <div class="navbar-background" style="background-image: url('https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/navigation/v2/desktop-dropdown-1-4.jpg?t=234');
-                                                background-size: 315px 100px">
-
-                                        <p class="navbar-sub">SPECIALS</p>
-
-                                    </div>
-
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <div class="navbar-title">
-                        <div class="navbar-sub-column">
-                            <a href="#">
-                                <p class="navbar-sub-detail">Wireless Headphones</p><a>
-                                    <a href="">
-                                        <p class="navbar-sub-detail">Wired Headphones</p>
-                                    </a>
-                                    <a href="#">
-                                        <p class="navbar-sub-detail">Crusher ANC-NEW</p>
-                                    </a>
-
-                        </div>
-
-                        <div class="navbar-sub-column">
-                            <a href="#">
-                                <p class="navbar-sub-detail">Wireless Earpuds</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Wired Earbuds</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Indy True Wireless</p>
-                            </a>
-
-                        </div>
-
-                        <div class="navbar-sub-column">
-                            <a href="#">
-                                <p class="navbar-sub-detail">Backpacks, Travel Kit & Cases</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Hats</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Speakers</p>
-                            </a>
-                        </div>
-
-                        <div class="navbar-sub-column">
-                            <a href="#">
-                                <p class="navbar-sub-detail">12 Moods</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Custom Product</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">New Arrival</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Sale</p>
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class="show-all">
-                        <div><a href="#" class="show-all-detail">Shop all Headphones</a></div>
-                        <div><a href="#" class="show-all-detail">Shop all Earpuds</a></div>
-                        <div><a href="#" class="show-all-detail">Shop all Accessories</a></div>
-                        <div></div>
-
-                    </div>
-                </div>
-
-            </li>
-            <li class="navbar-list" id="navbar-list-2">
-                <a href="#" class="left-navbar-list-anchor">12 MOODS</a>
-            </li>
-        </ul>
-
-
-    </div>
-
-    <div class="right-header">
-
-        <ul class="header-list">
-            <li class="navbar-list" id="navbar-list-3">
-                <a href="#" class="right-navbar-list-anchor">Location</a>
-
-                <div class="navbar-container">
-                    <ul class="location">
-
-                        <li class="local-area">NORTH AMERICA
-
-                            <p class="location-store">Canada</p>
-                            <p class="location-store">Mexico</p>
-                            <p class="location-store">United State</p>
-                        </li>
-
-                        <li class="local-area">
-                            EUROPE / MIDDLE EARTH
-                            <p class="location-store">Austria</p>
-                            <p class="location-store">France</p>
-                            <p class="location-store">Germany</p>
-                            <p class="location-store">Switzerland</p>
-                            <p class="location-store">United Kingdom</p>
-                            <p class="location-store">Europe (EN)</p>
-                            <p class="location-store">Other Middle Earth Countries</p>
-                        </li>
-
-                        <li class="local-area">AFRICA
-                            <p class="location-store">South Africa</p><br>
-                            <div class="location" id="local-area-asia">ASIA
-                                <p class="location-store">India</p>
-                                <p class="location-store">Japan</p>
-                                <p class="location-store">South Korea</p>
-                                <p class="location-store">Taiwan</p>
-                            </div>
-
-
-                        </li>
-                        <li class="local-area" id="local-area-pacific">PACIFIC
-                            <p class="location-store">Australia</p>
-                            <p class="location-store">New Zealand</p>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-
-            <li class="navbar-list" id="navbar-list-4">
-                <a href="#" class="right-navbar-list-anchor">Support</a>
-
-                <div class="navbar-container">
-                    <ul class="service-support">
-                        <li class="service-support-service">HELP &nbsp; CENTER</li>
-                        <li class="service-support-service">PRODUCT &nbsp; SETUP</li>
-                        <li class="service-support-service">WARRANTY</li>
-                        <li class="service-support-service">ORDER &nbsp; STATUS</li>
-                        <li class="service-support-service">INTERNATIONAL &nbsp; SUPPORT</li>
-
-                    </ul>
-
-                </div>
-            </li>
-            <li class="navbar-list"><a href="#"><i class="material-icons" id="sign-in">perm_identity</i></a>
-            </li>
-
-            <li class="navbar-list" id="navbar-list-6">
-                <a href="#"><i class="material-icons" id="search-button">search</i></a>
-                <div id="search-navbar-container">
-                    <div class="search-navbar">
-                        <form action="" class="search-input">
-                            <input type="search" class="search-btn" placeholder="Search">
-                            <a class="exit-btn" id="exit" href="#"><i class=" fa-1x fas fa-times"></i></a>
-                        </form>
-                    </div>
-
-                </div>
-            </li>
-            <li class="navbar-list"><i id="cart-btn" class="material-icons">work_outline</i></li>
-
-
-        </ul>
-
-    </div>
-
-</div>
-
-
-</header>
 
 <main class="main">
 <div id="backgroundCover-container">
    
 </div>
 
-
-
-
 </main>
 
-<footer class="footer-main">
 
-<div class="footer-top-container">
-    <div class="footer-top">
-        <h4>HEAD IT FIRST</h4>
-        <p>Sign up and save on your first order.
-            Be the first to get access to limited-edition products,
-            exclusive music performances, and athlete stories.</p>
-        <div class="email-container">
-            <input type="email" name="email" placeholder="Email" class="email-btn">
-
-            <button class="send">Send</button>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<div class="footer-bottom-container">
-
-    <div class="footer-bottom-column" id="footer-bottom-column-1">
-
-        <div class="footer-bottom-tank">
-
-            <p>F0LLOW US</p>
-
-            <div class="social-icon-container">
-                <a href="#" class="social-icon"><i class="fa-3x fab fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class=" fa-3x fab fa-youtube"></i></a>
-                <a href="#" class="social-icon"><i class=" fa-3x fab fa-facebook-square"></i></a>
-                <a href="#" class="social-icon"><i class="fa-3x  fab fa-twitter"></i></a>
-            </div>
-
-        </div>
-
-    </div>
-    <div class="footer-bottom-column" id="footer-bottom-column-2">
-        <div class="paragraph-tank">
-            <div class="paragraph-column">
-                <p class="paragraph-title">Help Center</p>
-                <p class="paragraph-title">Contact Us</p>
-                <p class="paragraph-title">Account</p>
-                <p class="paragraph-title">Product Setup</p>
-                <p class="paragraph-title">Warranty</p>
-                <p class="paragraph-title">Order Status</p>
-            </div>
-            <div class="paragraph-column">
-                <p class="paragraph-title">Custom Product</p>
-                <p class="paragraph-title"> Bulk Orders</p>
-                <p class="paragraph-title">Press Releases</p>
-
-            </div>
-            <div class="paragraph-column">
-                <p class="paragraph-title">Our Story</p>
-                <p class="paragraph-title">Born in PC</p>
-                <p class="paragraph-title">Protect Our Winters</p>
-                <p class="paragraph-title">Careers</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer-bottom-column" id="footer-bottom-column-3">
-        <div class="podcast-container">
-            <p>SUBSRCIBE TO OUR PODCAST</p>
-            <div class="podcast-tank">
-                <a href="#" class="paragraph-title">iTunes</a>
-                <a href="#" class="paragraph-title">Spotify</a>
-                <a href="#" class="paragraph-title">YouTube</a>
-            </div>
-        </div>
-
-
-    </div>
-
-
-</footer>
 
 `
 
 component.showCart=`
 
-<header>
-<div class="main-header">
-    <div class="left-header">
-        <a href="../docs/index.html"></a>
-        <a href="./index.html"><img src="./image/logo.png" alt="logo" width="40px" height="33px"
-                class="slogan-img"></a>
-        <a href="./index.html" class="slogan-img"><img src="./image/slogan.png" alt="" width="150px"
-                height="37px" id="slogan"></a>
 
-        <ul class="header-list" id="left-header-list">
-
-            <li class="navbar-list" id="navbar-list-1">
-
-                <a href="#" class="left-navbar-list-anchor" id="shop">Shop</a>
-
-                <div class="navbar-container">
-                    <ul id="navbar-ul">
-                        <li class="navbar-container-li">
-
-                            <div class="navbar-column">
-
-                                <a href="#" class="hover-to-zoom">
-
-                                    <div class="navbar-background" style="background-image: url('https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/navigation/v2/desktop-dropdown-1-1.jpg?t=234');
-                                            background-size: 315px 100px">
-
-                                        <p class="navbar-sub">HEADPHONES</p>
-
-                                    </div>
-
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="navbar-container-li">
-
-                            <div class="navbar-column">
-
-                                <a href="#" class="hover-to-zoom">
-
-                                    <div class="navbar-background" style="background-image: url('https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/navigation/v2/desktop-dropdown-1-2.jpg?t=234');
-                                                background-size: 315px 100px">
-
-                                        <p class="navbar-sub">EARPUDS</p>
-
-                                    </div>
-
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="navbar-container-li">
-
-                            <div class="navbar-column">
-
-                                <a href="#" class="hover-to-zoom">
-
-                                    <div class="navbar-background" style="background-image: url('https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/navigation/v2/desktop-dropdown-1-3.jpg?t=234');
-                                                    background-size: 315px 100px">
-
-                                        <p class="navbar-sub">ACCESSORIES</p>
-
-                                    </div>
-
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="navbar-container-li">
-
-                            <div class="navbar-column">
-
-                                <a href="#" class="hover-to-zoom">
-
-                                    <div class="navbar-background" style="background-image: url('https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/navigation/v2/desktop-dropdown-1-4.jpg?t=234');
-                                                background-size: 315px 100px">
-
-                                        <p class="navbar-sub">SPECIALS</p>
-
-                                    </div>
-
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <div class="navbar-title">
-                        <div class="navbar-sub-column">
-                            <a href="#">
-                                <p class="navbar-sub-detail">Wireless Headphones</p><a>
-                                    <a href="">
-                                        <p class="navbar-sub-detail">Wired Headphones</p>
-                                    </a>
-                                    <a href="#">
-                                        <p class="navbar-sub-detail">Crusher ANC-NEW</p>
-                                    </a>
-
-                        </div>
-
-                        <div class="navbar-sub-column">
-                            <a href="#">
-                                <p class="navbar-sub-detail">Wireless Earpuds</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Wired Earbuds</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Indy True Wireless</p>
-                            </a>
-
-                        </div>
-
-                        <div class="navbar-sub-column">
-                            <a href="#">
-                                <p class="navbar-sub-detail">Backpacks, Travel Kit & Cases</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Hats</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Speakers</p>
-                            </a>
-                        </div>
-
-                        <div class="navbar-sub-column">
-                            <a href="#">
-                                <p class="navbar-sub-detail">12 Moods</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Custom Product</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">New Arrival</p>
-                            </a>
-                            <a href="#">
-                                <p class="navbar-sub-detail">Sale</p>
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class="show-all">
-                        <div><a href="#" class="show-all-detail">Shop all Headphones</a></div>
-                        <div><a href="#" class="show-all-detail">Shop all Earpuds</a></div>
-                        <div><a href="#" class="show-all-detail">Shop all Accessories</a></div>
-                        <div></div>
-
-                    </div>
-                </div>
-
-            </li>
-            <li class="navbar-list" id="navbar-list-2">
-                <a href="#" class="left-navbar-list-anchor">12 MOODS</a>
-            </li>
-        </ul>
-
-
-    </div>
-
-    <div class="right-header">
-
-        <ul class="header-list">
-            <li class="navbar-list" id="navbar-list-3">
-                <a href="#" class="right-navbar-list-anchor">Location</a>
-
-                <div class="navbar-container">
-                    <ul class="location">
-
-                        <li class="local-area">NORTH AMERICA
-
-                            <p class="location-store">Canada</p>
-                            <p class="location-store">Mexico</p>
-                            <p class="location-store">United State</p>
-                        </li>
-
-                        <li class="local-area">
-                            EUROPE / MIDDLE EARTH
-                            <p class="location-store">Austria</p>
-                            <p class="location-store">France</p>
-                            <p class="location-store">Germany</p>
-                            <p class="location-store">Switzerland</p>
-                            <p class="location-store">United Kingdom</p>
-                            <p class="location-store">Europe (EN)</p>
-                            <p class="location-store">Other Middle Earth Countries</p>
-                        </li>
-
-                        <li class="local-area">AFRICA
-                            <p class="location-store">South Africa</p><br>
-                            <div class="location" id="local-area-asia">ASIA
-                                <p class="location-store">India</p>
-                                <p class="location-store">Japan</p>
-                                <p class="location-store">South Korea</p>
-                                <p class="location-store">Taiwan</p>
-                            </div>
-
-
-                        </li>
-                        <li class="local-area" id="local-area-pacific">PACIFIC
-                            <p class="location-store">Australia</p>
-                            <p class="location-store">New Zealand</p>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-
-            <li class="navbar-list" id="navbar-list-4">
-                <a href="#" class="right-navbar-list-anchor">Support</a>
-
-                <div class="navbar-container">
-                    <ul class="service-support">
-                        <li class="service-support-service">HELP &nbsp; CENTER</li>
-                        <li class="service-support-service">PRODUCT &nbsp; SETUP</li>
-                        <li class="service-support-service">WARRANTY</li>
-                        <li class="service-support-service">ORDER &nbsp; STATUS</li>
-                        <li class="service-support-service">INTERNATIONAL &nbsp; SUPPORT</li>
-
-                    </ul>
-
-                </div>
-            </li>
-            <li class="navbar-list"><a href="#"><i class="material-icons" id="sign-in">perm_identity</i></a>
-            </li>
-
-            <li class="navbar-list" id="navbar-list-6">
-                <a href="#"><i class="material-icons" id="search-button">search</i></a>
-                <div id="search-navbar-container">
-                    <div class="search-navbar">
-                        <form action="" class="search-input">
-                            <input type="search" class="search-btn" placeholder="Search">
-                            <a class="exit-btn" id="exit" href="#"><i class=" fa-1x fas fa-times"></i></a>
-                        </form>
-                    </div>
-
-                </div>
-            </li>
-            <li class="navbar-list"><i id="cart-btn"class="material-icons">work_outline</i></li>
-
-
-        </ul>
-
-    </div>
-
-</div>
-
-
-</header>
 
 <main class="main" id="main-cart">
 
@@ -2540,82 +674,5 @@ component.showCart=`
 
 </main>
 
-<footer class="footer-main">
-
-        <div class="footer-top-container">
-            <div class="footer-top">
-                <h4>HEAD IT FIRST</h4>
-                <p>Sign up and save on your first order.
-                    Be the first to get access to limited-edition products,
-                    exclusive music performances, and athlete stories.</p>
-                <div class="email-container">
-                    <input type="email" name="email" placeholder="Email" class="email-btn">
-
-                    <button class="send">Send</button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="footer-bottom-container">
-
-            <div class="footer-bottom-column" id="footer-bottom-column-1">
-
-                <div class="footer-bottom-tank">
-
-                    <p>F0LLOW US</p>
-
-                    <div class="social-icon-container">
-                        <a href="#" class="social-icon"><i class="fa-3x fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class=" fa-3x fab fa-youtube"></i></a>
-                        <a href="#" class="social-icon"><i class=" fa-3x fab fa-facebook-square"></i></a>
-                        <a href="#" class="social-icon"><i class="fa-3x  fab fa-twitter"></i></a>
-                    </div>
-
-                </div>
-
-            </div>
-            <div class="footer-bottom-column" id="footer-bottom-column-2">
-                <div class="paragraph-tank">
-                    <div class="paragraph-column">
-                        <p class="paragraph-title">Help Center</p>
-                        <p class="paragraph-title">Contact Us</p>
-                        <p class="paragraph-title">Account</p>
-                        <p class="paragraph-title">Product Setup</p>
-                        <p class="paragraph-title">Warranty</p>
-                        <p class="paragraph-title">Order Status</p>
-                    </div>
-                    <div class="paragraph-column">
-                        <p class="paragraph-title">Custom Product</p>
-                        <p class="paragraph-title"> Bulk Orders</p>
-                        <p class="paragraph-title">Press Releases</p>
-
-                    </div>
-                    <div class="paragraph-column">
-                        <p class="paragraph-title">Our Story</p>
-                        <p class="paragraph-title">Born in PC</p>
-                        <p class="paragraph-title">Protect Our Winters</p>
-                        <p class="paragraph-title">Careers</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom-column" id="footer-bottom-column-3">
-                <div class="podcast-container">
-                    <p>SUBSRCIBE TO OUR PODCAST</p>
-                    <div class="podcast-tank">
-                        <a href="#" class="paragraph-title">iTunes</a>
-                        <a href="#" class="paragraph-title">Spotify</a>
-                        <a href="#" class="paragraph-title">YouTube</a>
-                    </div>
-                </div>
-
-
-            </div>
-
-
-    </footer>
 
 `
